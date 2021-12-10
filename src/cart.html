@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>My Cart - wallE Wallet Shop</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+
+    <!-- Bootstrap icons-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <style>
+      .shopping-cart {
+        padding-bottom: 50px;
+        font-family: "Montserrat", sans-serif;
+      }
+
+      .shopping-cart.dark {
+        background-color: #f6f6f6;
+      }
+
+      .shopping-cart .content {
+        box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.075);
+        background-color: white;
+      }
+
+      .shopping-cart .block-heading {
+        padding-top: 50px;
+        margin-bottom: 40px;
+        text-align: center;
+      }
+
+      .shopping-cart .block-heading p {
+        text-align: center;
+        max-width: 420px;
+        margin: auto;
+        opacity: 0.7;
+      }
+
+      .shopping-cart .dark .block-heading p {
+        opacity: 0.8;
+      }
+
+      .shopping-cart .block-heading h1,
+      .shopping-cart .block-heading h2,
+      .shopping-cart .block-heading h3 {
+        margin-bottom: 1.2rem;
+        color: black;
+      }
+
+      .shopping-cart .items {
+        margin: auto;
+      }
+
+      .shopping-cart .items .product {
+        margin-bottom: 20px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+
+      .shopping-cart .items .product .info {
+        padding-top: 0px;
+        text-align: center;
+      }
+
+      .shopping-cart .items .product .info .product-name {
+        font-weight: 600;
+      }
+
+      .shopping-cart .items .product .info .product-name .product-info {
+        font-size: 14px;
+        margin-top: 15px;
+      }
+
+      .shopping-cart .items .product .info .product-name .product-info .value {
+        font-weight: 400;
+      }
+
+      .shopping-cart .items .product .info .quantity .quantity-input {
+        margin: auto;
+        width: 80px;
+      }
+
+      .shopping-cart .items .product .info .price {
+        margin-top: 15px;
+        font-weight: bold;
+        font-size: 22px;
+      }
+
+      .shopping-cart .summary {
+        border-top: 2px solid black;
+        background-color: #e9ecef;
+        height: 100%;
+        padding: 30px;
+      }
+
+      .shopping-cart .summary h3 {
+        text-align: center;
+        font-size: 1.3em;
+        font-weight: 600;
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+
+      .shopping-cart .summary .summary-item:not(:last-of-type) {
+        padding-bottom: 10px;
+        padding-top: 10px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      }
+
+      .shopping-cart .summary .text {
+        font-size: 1em;
+        font-weight: 600;
+      }
+
+      .shopping-cart .summary .price {
+        font-size: 1em;
+        float: right;
+      }
+
+      .shopping-cart .summary button {
+        margin-top: 20px;
+      }
+
+      @media (min-width: 768px) {
+        .shopping-cart .items .product .info {
+          padding-top: 25px;
+          text-align: left;
+        }
+
+        .shopping-cart .items .product .info .price {
+          font-weight: bold;
+          font-size: 22px;
+          top: 17px;
+        }
+
+        .shopping-cart .items .product .info .quantity {
+          text-align: center;
+        }
+        .shopping-cart .items .product .info .quantity .quantity-input {
+          padding: 4px 10px;
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container px-4 px-lg-5">
+        <a class="navbar-brand" href="index.html">wallE</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <a
+              class="btn btn-outline-dark active"
+              type="submit"
+              href="cart.html"
+            >
+              <i class="bi-cart-fill me-1"></i>
+              Cart
+              <span class="badge bg-dark text-white ms-1 rounded-pill">3</span>
+            </a>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <!-- Editable Region -->
+    <button onclick="topFunction()" id="myBtn" title="Go to top">
+      Go to top
+    </button>
+    <section class="shopping-cart dark">
+      <div class="container mb-5">
+        <div class="block-heading">
+          <h2>Your Shopping Cart</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam
+            urna, dignissim nec auctor in, mattis vitae leo.
+          </p>
+        </div>
+        <div class="content">
+          <div class="row">
+            <div class="col-md-12 col-lg-8">
+              <div class="items">
+                <div class="product">
+                  <div class="row">
+                    <div class="col-md-3">
+                      <img
+                        class="img-fluid mx-auto d-block image"
+                        src="assets/img/index/1.jpeg"
+                      />
+                    </div>
+                    <div class="col-md-8">
+                      <div class="info">
+                        <div class="row">
+                          <div class="col-md-5 product-name">
+                            <div class="product-name">
+                              <a class="nav-link text-black" href="#"
+                                >Lorem Ipsum dolor</a
+                              >
+                              <div class="product-info">
+                                <div>
+                                  Color: <span class="value">Brown</span>
+                                </div>
+                                <div>Size: <span class="value">L</span></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-4 quantity">
+                            <label for="quantity">Quantity:</label>
+                            <input
+                              id="quantity"
+                              type="number"
+                              value="1"
+                              class="form-control quantity-input"
+                            />
+                          </div>
+                          <div class="col-md-3 price">
+                            <span>$120</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="product">
+                  <div class="row">
+                    <div class="col-md-3">
+                      <img
+                        class="img-fluid mx-auto d-block image"
+                        src="assets/img/index/2.jpeg"
+                      />
+                    </div>
+                    <div class="col-md-8">
+                      <div class="info">
+                        <div class="row">
+                          <div class="col-md-5 product-name">
+                            <div class="product-name">
+                              <a class="nav-link text-black" href="#"
+                                >Lorem Ipsum dolor</a
+                              >
+                              <div class="product-info">
+                                <div>
+                                  Color: <span class="value">Aqua</span>
+                                </div>
+                                <div>Size: <span class="value">M</span></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-4 quantity">
+                            <label for="quantity">Quantity:</label>
+                            <input
+                              id="quantity"
+                              type="number"
+                              value="1"
+                              class="form-control quantity-input"
+                            />
+                          </div>
+                          <div class="col-md-3 price">
+                            <span>$120</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="product">
+                  <div class="row">
+                    <div class="col-md-3">
+                      <img
+                        class="img-fluid mx-auto d-block image"
+                        src="assets/img/index/3.jpeg"
+                      />
+                    </div>
+                    <div class="col-md-8">
+                      <div class="info">
+                        <div class="row">
+                          <div class="col-md-5 product-name">
+                            <div class="product-name">
+                              <a class="nav-link text-black" href="#"
+                                >Lorem Ipsum dolor</a
+                              >
+                              <div class="product-info">
+                                <div>
+                                  Color: <span class="value">Blue</span>
+                                </div>
+                                <div>Size: <span class="value">XL</span></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-4 quantity">
+                            <label for="quantity">Quantity:</label>
+                            <input
+                              id="quantity"
+                              type="number"
+                              value="1"
+                              class="form-control quantity-input"
+                            />
+                          </div>
+                          <div class="col-md-3 price">
+                            <span>$120</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12 col-lg-4">
+              <div class="summary">
+                <h3>Summary</h3>
+                <div class="summary-item">
+                  <span class="text">Subtotal</span
+                  ><span class="price">$360</span>
+                </div>
+                <div class="summary-item">
+                  <span class="text">Discount</span
+                  ><span class="price">$0</span>
+                </div>
+                <div class="summary-item">
+                  <span class="text">Shipping</span
+                  ><span class="price">$0</span>
+                </div>
+                <div class="summary-item">
+                  <span class="text">Total</span><span class="price">$360</span>
+                </div>
+                <button type="button" class="btn btn-dark btn-lg btn-block">
+                  Checkout
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer-->
+    <footer class="page-footer text-white bg-dark font-small blue pt-4">
+      <!-- Footer Links -->
+      <div class="container-fluid text-center text-md-left">
+        <!-- Grid row -->
+        <div class="row">
+          <!-- Grid column -->
+          <div class="col-md-6 mt-md-0 mt-3">
+            <!-- Content -->
+            <h5 class="text-uppercase">wallE Wallet Inc.</h5>
+            <p>01 Second Avenue, Third City, Fourth State, Fifthilian.</p>
+          </div>
+          <!-- Grid column -->
+
+          <hr class="clearfix w-100 d-md-none pb-3" />
+
+          <!-- Grid column -->
+          <div class="col-md-3 mb-md-0 mb-3">
+            <!-- Links -->
+            <h5 class="text-uppercase">Policy</h5>
+
+            <ul class="list-unstyled">
+              <li>
+                <a class="nav-link text-white" href="#!">Returning</a>
+              </li>
+              <li>
+                <a class="nav-link text-white" href="#!">Changing</a>
+              </li>
+              <li>
+                <a class="nav-link text-white" href="#!">Q&A</a>
+              </li>
+            </ul>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-3 mb-md-0 mb-3">
+            <!-- Links -->
+            <h5 class="text-uppercase">Terms</h5>
+
+            <ul class="list-unstyled">
+              <li>
+                <a class="nav-link text-white" href="#!">Goods Insurance</a>
+              </li>
+              <li>
+                <a class="nav-link text-white" href="#!">Commercial License</a>
+              </li>
+              <li>
+                <a class="nav-link text-white" href="#!">Forum</a>
+              </li>
+            </ul>
+          </div>
+          <!-- Grid column -->
+        </div>
+        <!-- Grid row -->
+      </div>
+      <!-- Footer Links -->
+
+      <!-- Copyright -->
+      <div class="footer-copyright text-center py-3">
+        © 2021 Copyright: wallE Wallet Inc.
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
