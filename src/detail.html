@@ -18,6 +18,13 @@
     />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
+    <style>
+      #alertBox {
+        display: none;
+      }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/scripts.js"></script>
   </head>
   <body>
     <!-- Button -->
@@ -70,6 +77,16 @@
       </div>
     </nav>
     <!-- Editable Region -->
+    <div class="container">
+      <div class="row">
+        <div class="col text-center">
+          <div class="alert alert-success alert-dismissible" id="alertBox">
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            <strong>Success!</strong> This wallet has been added to Your Cart.<a class="nav-link" href="cart.html" style="display: inline;">Click here.</a>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="container mt-5">
       <div class="row mb-5">
         <div class="col-md-4">
@@ -107,10 +124,10 @@
             </div>
             <div class="row mt-4">
               <div class="col">
-                <button class="form-control btn-dark">Add to cart</button>
+                <button type="button" class="form-control btn-dark" id="btnAdd">Add to cart</button>
               </div>
               <div class="col">
-                <button class="form-control btn-success">Save to Later</button>
+                <button type="button" class="form-control btn-success">Save to Later</button>
               </div>
             </div>
           </form>
@@ -359,7 +376,5 @@
     </footer>
     <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Core theme JS-->
-    <script src="js/scripts.js"></script>
   </body>
 </html>
