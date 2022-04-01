@@ -1,266 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-    <title>Joanna WLT - wallE Wallet Shop</title>
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
-      rel="stylesheet"
-    />
-    <link href="css/styles.css" rel="stylesheet" />
-    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-    <style>
-      #alertBox {
-        display: none;
-      }
-    </style>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="js/scripts.js"></script>
-  </head>
-  <body>
-    <button onclick="topFunction()" id="myBtn" title="Go to top">
-      <i class="bi bi-caret-up-fill"></i>
-    </button>
-    <div id="nav-placeholder"></div>
-    <script>
-      $(function () {
-        $("#nav-placeholder").load("template/navigation.html");
-      });
-    </script>
-    <div class="container mt-5">
-      <div class="row mb-5">
-        <div class="col-md-4">
-          <img
-            height="450px"
-            src="assets/img/details/2.jpg"
-            class="card-img-top"
-            alt="..."
-          />
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <title>Joanna WLT - wallE Wallet Shop</title>
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+  <link href="css/styles.css" rel="stylesheet" />
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <style>
+    #alertBox {
+      display: none;
+    }
+  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="js/scripts.js"></script>
+</head>
+
+<body>
+  <button onclick="topFunction()" id="myBtn" title="Go to top">
+    <i class="bi bi-caret-up-fill"></i>
+  </button>
+  <div id="nav-placeholder"></div>
+  <script>
+    $(function () {
+      $("#nav-placeholder").load("template/navigation.html");
+    });
+  </script>
+  <div class="container mt-5">
+    <div class="row mb-5">
+      <div class="col-md-4">
+        <img height="450px" src="assets/img/details/2.jpg" class="card-img-top" alt="..." />
+      </div>
+      <div class="col-md-8">
+        <h3 class="text-center display-5">Joanna WLT - Brown</h3>
+        <p>
+          Kiểu dáng ví ngang
+          Đường chỉ may tỉ mỉ, chắc chắn theo tiêu chuẩn xuất khẩu Châu Âu<br>
+          Ví da bò nam thiết kế gồm 2 ngăn chính, 1 ngăn khóa và nhiều ngăn nhỏ tiện dụng
+        </p>
+        <p><strong>Chất liệu</strong>: Da bò nhập khẩu 100%</p>
+        <p><strong>Kích thước</strong>: 12 x 12 cm</p>
+        <p><strong>Color</strong>: Brown</p>
+        <form>
+          <div class="row mt-3">
+            <p><strong>Số lượng</strong></p>
+            <div class="col-2">
+              <input type="number" min="1" class="form-control" placeholder="1" />
+            </div>
+          </div>
+          <div class="row mt-4">
+            <div class="col">
+              <button type="button" class="form-control btn-dark" id="btnAdd">Thêm vào giỏ hàng</button>
+            </div>
+            <div class="col">
+              <button type="button" class="form-control btn-success">Mua ngay</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="row">
+    </div>
+    <nav>
+      <div class="nav nav-tabs" id="nav-tab" role="tablist">
+        <a class="nav-link text-black active" id="nav-home-tab" data-bs-toggle="tab" href="#details" role="tab"
+          aria-controls="nav-home" aria-selected="true">Thông tin chi tiết</a>
+        <a class="nav-link text-black" id="nav-profile-tab" data-bs-toggle="tab" href="#feedbacks" role="tab"
+          aria-controls="nav-profile" aria-selected="false">Phản hồi từ khách hàng
+          <span class="badge bg-dark text-white ms-1 rounded-pill">4</span></a>
+      </div>
+    </nav>
+    <div class="tab-content mb-5" id="nav-TabContent">
+      <div class="tab-pane container fade show active" id="details">
+        <div class="row mt-5">
+          <div class="col-md-12 text-center">
+            <h4>Joanna WLT - Brown</h4>
+          </div>
         </div>
-        <div class="col-md-8">
-          <h3 class="text-center display-5">Joanna WLT - Brown</h3>
+        <div class="row mo-ta">
           <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam
-            aliquid temporibus, cumque consequuntur unde placeat quibusdam quis
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo
-            sed pariatur repellat impedit, sunt corrupti vitae animi veniam vero
-            repudiandae consequuntur provident iure doloremque repellendus
-            dolor? Quaerat commodi eligendi saepe.
+            BẢO HÀNH SẢN PHẨM 12 THÁNG<br>
+
+            Tất cả các sản phẩm quý khách mua tại Walley sẽ được bảo hành 12 tháng trong các trường hợp sản phẩm gặp
+            những sự cố như bong tróc da nổ tự nhiên.
+
+            Với những sản phẩm bị hư hỏng trong quá trình sử dụng như bị va vào vật sắc nhọn, bị ngập nước, rách da do
+            vật sắc nhọn đâm phải, mòn đế, hỏng khóa kéo, rách do một phần da bị mục nát,…… Walley vẫn sẽ bảo hành sản
+            phẩm cho bạn khi khách hàng xuất trình phiếu bảo hành khi mua hàng tại đây, khách hàng vui lòng hỗ trợ một
+            phần nhỏ chi phí bảo hành sản phẩm.
           </p>
-          <p><strong>Material</strong>: Fiber</p>
-          <p><strong>Specification</strong>: 12 x 12 cm</p>
-          <p><strong>Color</strong>: Brown</p>
-          <form>
-            <div class="row mt-3">
-              <p><strong>Quantity</strong></p>
-              <div class="col-2">
-                <input
-                  type="number"
-                  min="1"
-                  class="form-control"
-                  placeholder="1"
-                />
-              </div>
-            </div>
-            <div class="row mt-4">
-              <div class="col">
-                <button type="button" class="form-control btn-dark" id="btnAdd">Add to cart</button>
-              </div>
-              <div class="col">
-                <button type="button" class="form-control btn-success">Save to Later</button>
-              </div>
-            </div>
-          </form>
+          <img src="assets/img/details/3.jpg" class="img-fluid" alt="..." />
         </div>
       </div>
-      <div class="row">
-        </div>
-        <nav>
-          <div class="nav nav-tabs" id="nav-tab" role="tablist">
-            <a
-              class="nav-link text-black active"
-              id="nav-home-tab"
-              data-bs-toggle="tab"
-              href="#details"
-              role="tab"
-              aria-controls="nav-home"
-              aria-selected="true"
-              >Details</a
-            >
-            <a
-              class="nav-link text-black"
-              id="nav-profile-tab"
-              data-bs-toggle="tab"
-              href="#feedbacks"
-              role="tab"
-              aria-controls="nav-profile"
-              aria-selected="false"
-              >Feedbacks
-              <span class="badge bg-dark text-white ms-1 rounded-pill"
-                >4</span
-              ></a
-            >
-          </div>
-        </nav>
-        <div class="tab-content mb-5" id="nav-TabContent">
-          <div class="tab-pane container fade show active" id="details">
-            <div class="row mt-5">
-              <div class="col-md-12 text-center">
-                <h4>Joanna WLT - Brown</h4>
-              </div>
-            </div>
-            <div class="row mo-ta">
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi
-                maxime molestias a dolorem excepturi autem voluptatem?
-                Recusandae quam officiis culpa voluptatibus aspernatur
-                perspiciatis, praesentium saepe eligendi non ad. Aut, tempora.
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim
-                necessitatibus praesentium ullam magnam animi iste quibusdam
-                recusandae nam eum voluptatem voluptatibus quam, amet velit
-                impedit odio veniam minima! Praesentium, est. Lorem ipsum dolor,
-                sit amet consectetur adipisicing elit. Reiciendis, laudantium!
-                Eius ex doloremque at voluptatum assumenda molestias ea impedit,
-                cum reprehenderit distinctio voluptatem repudiandae quisquam
-                placeat enim. Ducimus, atque mollitia! Lorem ipsum dolor sit
-                amet, consectetur adipisicing elit. Unde repellendus,
-                consequatur, modi obcaecati facere at sunt cupiditate nihil
-                autem quidem quae nostrum quis eius eligendi deleniti ratione
-                accusantium magnam dolorum.
-              </p>
-              <img src="assets/img/details/3.jpg" class="img-fluid" alt="..." />
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi
-                maxime molestias a dolorem excepturi autem voluptatem?
-                Recusandae quam officiis culpa voluptatibus aspernatur
-                perspiciatis, praesentium saepe eligendi non ad. Aut, tempora.
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim
-                necessitatibus praesentium ullam magnam animi iste quibusdam
-                recusandae nam eum voluptatem voluptatibus quam, amet velit
-                impedit odio veniam minima! Praesentium, est. Lorem ipsum dolor,
-                sit amet consectetur adipisicing elit. Reiciendis, laudantium!
-                Eius ex doloremque at voluptatum assumenda molestias ea impedit,
-                cum reprehenderit distinctio voluptatem repudiandae quisquam
-                placeat enim. Ducimus, atque mollitia! Lorem ipsum dolor sit
-                amet, consectetur adipisicing elit. Unde repellendus,
-                consequatur, modi obcaecati facere at sunt cupiditate nihil
-                autem quidem quae nostrum quis eius eligendi deleniti ratione
-                accusantium magnam dolorum.
-              </p>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi
-                maxime molestias a dolorem excepturi autem voluptatem?
-                Recusandae quam officiis culpa voluptatibus aspernatur
-                perspiciatis, praesentium saepe eligendi non ad. Aut, tempora.
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim
-                necessitatibus praesentium ullam magnam animi iste quibusdam
-                recusandae nam eum voluptatem voluptatibus quam, amet velit
-                impedit odio veniam minima! Praesentium, est. Lorem ipsum dolor,
-                sit amet consectetur adipisicing elit. Reiciendis, laudantium!
-                Eius ex doloremque at voluptatum assumenda molestias ea impedit,
-                cum reprehenderit distinctio voluptatem repudiandae quisquam
-                placeat enim. Ducimus, atque mollitia! Lorem ipsum dolor sit
-                amet, consectetur adipisicing elit. Unde repellendus,
-                consequatur, modi obcaecati facere at sunt cupiditate nihil
-                autem quidem quae nostrum quis eius eligendi deleniti ratione
-                accusantium magnam dolorum.
-              </p>
-            </div>
-          </div>
 
-          <div class="tab-pane container fade" id="feedbacks">
-            <div class="row mt-5">
-              <div class="col-md-12">
-                <div class="media">
-                  <div class="mr-3">
-                    <i class="fas fa-user-circle"></i>
-                  </div>
-                  <div class="media-body">
-                    <h5 class="mt-0">
-                      <b>Tommy</b>
-                      <span style="font-size: small">
-                        <small> at 11-12-2006 01:00 GMT+07</small>
-                      </span>
-                    </h5>
-                    <div class="d-flex justify-content-left small text-warning">
-                      <div class="bi-star-fill"></div>
-                      <div class="bi-star-fill"></div>
-                      <div class="bi-star-fill"></div>
-                      <div class="bi-star-fill"></div>
-                    </div>
-                    <p>Good!</p>
-                  </div>
-                  <div class="media-body">
-                    <h5 class="mt-0">
-                      <b>Liam</b>
-                      <span style="font-size: small">
-                        <small> at 11-12-2006 01:00 GMT+07</small>
-                      </span>
-                    </h5>
-                    <div class="d-flex justify-content-left small text-warning">
-                      <div class="bi-star-fill"></div>
-                      <div class="bi-star-fill"></div>
-                      <div class="bi-star-fill"></div>
-                      <div class="bi-star-fill"></div>
-                      <div class="bi-star-fill"></div>
-                    </div>
-                    <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Modi provident nesciunt quae debitis quod laudantium
-                      aperiam dolorem. Voluptates, porro aliquid animi impedit
-                      dolores, consequuntur reiciendis id, harum a nulla
-                      molestiae!
-                    </p>
-                  </div>
-                  <div class="media-body">
-                    <h5 class="mt-0">
-                      <b>Redie</b>
-                      <span style="font-size: small">
-                        <small> at 11-12-2006 01:00 GMT+07</small>
-                      </span>
-                    </h5>
-                    <div class="d-flex justify-content-left small text-warning">
-                      <div class="bi-star-fill"></div>
-                      <div class="bi-star-fill"></div>
-                      <div class="bi-star-fill"></div>
-                      <div class="bi-star-fill"></div>
-                    </div>
-                    <p>Good quality</p>
-                  </div>
-                  <div class="media-body">
-                    <h5 class="mt-0">
-                      <b>Andrei</b>
-                      <span style="font-size: small">
-                        <small> at 11-12-2006 01:00 GMT+07</small>
-                      </span>
-                    </h5>
-                    <div class="d-flex justify-content-left small text-warning">
-                      <div class="bi-star-fill"></div>
-                      <div class="bi-star-fill"></div>
-                      <div class="bi-star-fill"></div>
-                    </div>
-                    <p>Bad delivery. Good product</p>
-                  </div>
+      <div class="tab-pane container fade" id="feedbacks">
+        <div class="row mt-5">
+          <div class="col-md-12">
+            <div class="media">
+              <div class="mr-3">
+                <i class="fas fa-user-circle"></i>
+              </div>
+              <div class="media-body">
+                <h5 class="mt-0">
+                  <b>Tấn Chương</b>
+                  <span style="font-size: small">
+                    <small> 11-05-2022 01:00 </small>
+                  </span>
+                </h5>
+                <div class="d-flex justify-content-left small text-warning">
+                  <div class="bi-star-fill"></div>
+                  <div class="bi-star-fill"></div>
+                  <div class="bi-star-fill"></div>
+                  <div class="bi-star-fill"></div>
                 </div>
+                <p>Tốt!</p>
+              </div>
+              <div class="media-body">
+                <h5 class="mt-0">
+                  <b>Hoàng Huynh</b>
+                  <span style="font-size: small">
+                    <small> 11-03-2022 11:00</small>
+                  </span>
+                </h5>
+                <div class="d-flex justify-content-left small text-warning">
+                  <div class="bi-star-fill"></div>
+                  <div class="bi-star-fill"></div>
+                  <div class="bi-star-fill"></div>
+                  <div class="bi-star-fill"></div>
+                  <div class="bi-star-fill"></div>
+                </div>
+                <p>
+                  Tôi đã mua ví da bò ở nhiều shop khác nhau nhưng Walley đã mang lại cho tôi vượt xa sự mong đợ, chất
+                  lượng sản phẩm tốt nhân viên tư vấn nhiệt tình.
+                </p>
+              </div>
+              <div class="media-body">
+                <h5 class="mt-0">
+                  <b>Trương Tấn</b>
+                  <span style="font-size: small">
+                    <small> 11-02-2022 16:00 </small>
+                  </span>
+                </h5>
+                <div class="d-flex justify-content-left small text-warning">
+                  <div class="bi-star-fill"></div>
+                  <div class="bi-star-fill"></div>
+                  <div class="bi-star-fill"></div>
+                  <div class="bi-star-fill"></div>
+                </div>
+                <p>Chất lượng tốt</p>
+              </div>
+              <div class="media-body">
+                <h5 class="mt-0">
+                  <b>Trí Vũ</b>
+                  <span style="font-size: small">
+                    <small> 11-01-2022 09:00</small>
+                  </span>
+                </h5>
+                <div class="d-flex justify-content-left small text-warning">
+                  <div class="bi-star-fill"></div>
+                  <div class="bi-star-fill"></div>
+                  <div class="bi-star-fill"></div>
+                </div>
+                <p>Giao hàng nhanh và chu đáo</p>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div id="footer-placeholder"></div>
-    <script>
-      $(function () {
-        $("#footer-placeholder").load("template/footer.html");
-      });
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-  </body>
+  </div>
+  </div>
+  <div id="footer-placeholder"></div>
+  <script>
+    $(function () {
+      $("#footer-placeholder").load("template/footer.html");
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
 </html>
